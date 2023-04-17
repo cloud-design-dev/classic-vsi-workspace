@@ -1,5 +1,5 @@
 locals {
-  prefix = "${var.project_prefix}-${random_string.prefix.result}"
+  prefix = random_string.prefix.result
   tags = [
     "project:${local.prefix}",
     "owner:${var.owner}",

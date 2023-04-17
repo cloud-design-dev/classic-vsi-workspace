@@ -7,5 +7,5 @@ data "ibm_network_vlan" "public" {
 }
 
 data "ibm_network_vlan" "private" {
-    number = var.private_vlan_number
+  number = var.private_vlan_number
 }

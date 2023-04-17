@@ -1,18 +1,12 @@
-variable "project_prefix" {
-  description = "Prefix to add to all deployed resources. If none is provided, a random string will be generated."
-  type        = string
-  default     = ""
-}
-
 variable "datacenter" {
   description = "Dc for the instance"
-  default = "dal10"
+  default     = "dal10"
 }
 
 variable "existing_ssh_key" {
   description = "Name of the existing SSH key"
   type        = string
-  default     = ""
+  default     = "rt-andromeda-galaxy-key"
 }
 
 variable "machine_type" {
@@ -48,4 +42,14 @@ variable "public_vlan_number" {
 variable "private_vlan_number" {
   description = "Private VLAN number to deploy the warpspeed virtual instance"
   default     = 1648
+}
+
+variable "iaas_classic_api_key" {
+  description = "API key for the IBM Cloud account"
+  type        = string
+}
+
+variable "iaas_classic_username" {
+  description = "Username for the IBM Cloud account"
+  type        = string
 }
