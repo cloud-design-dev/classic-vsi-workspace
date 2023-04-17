@@ -22,34 +22,24 @@ variable "os_reference_code" {
 }
 
 variable "domain" {
-  description = "Domain to deploy the warpspeed virtual instance"
+  description = "Domain for the virtual instance"
   type        = string
   default     = "ryantiffany.dev"
 }
 
 variable "owner" {
-  description = "Owner of the warpspeed virtual instance"
+  description = "Owner of the virtual instance"
   type        = string
   default     = ""
 }
 
-variable "public_vlan_number" {
-  description = "Public VLAN number to deploy the warpspeed virtual instance"
+variable "public_vlan" {
+  description = "Public VLAN name where instance will be deployed."
   type        = string
-  default     = "1657"
+  default     = "public-dal10-vlan"
 }
 
-variable "private_vlan_number" {
-  description = "Private VLAN number to deploy the warpspeed virtual instance"
-  default     = 1648
-}
-
-variable "iaas_classic_api_key" {
-  description = "API key for the IBM Cloud account"
-  type        = string
-}
-
-variable "iaas_classic_username" {
-  description = "Username for the IBM Cloud account"
-  type        = string
-}
+variable "private_vlan" {
+  description = "Private VLAN name to deploy the warpspeed virtual instance"
+  default     = "private-dal10-vlan"
+}	

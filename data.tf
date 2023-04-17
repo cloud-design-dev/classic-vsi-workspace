@@ -3,9 +3,9 @@ data "ibm_compute_ssh_key" "existing" {
 }
 
 data "ibm_network_vlan" "public" {
-  number = var.public_vlan_number
+  number = var.public_vlan
 }
 
 data "ibm_network_vlan" "private" {
-  number = var.private_vlan_number
+  number = var.private_vlan
 }
