@@ -31,3 +31,7 @@ resource "ibm_compute_vm_instance" "vsi" {
   ipv6_enabled             = true
   ssh_key_ids              = [data.ibm_compute_ssh_key.existing.id]
 }
+
+output "instance_id" {
+  value = ibm_compute_vm_instance.vsi.id
+}
